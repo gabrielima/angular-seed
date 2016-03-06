@@ -49,7 +49,12 @@ gulp.task('styles', function(){
 });
 
 gulp.task('scripts', function(){
-	return gulp.src('src/js/**/*.js')
+	return gulp.src(['src/js/app.js',
+      'src/js/services/*.js',
+      'src/js/directives/*.js',
+      'src/js/controllers/*.js',
+			'src/js/scripts.js'
+    ])
 	.pipe(plumber({
 		errorHandler: function (error) {
 			console.log(error.message);
