@@ -1,0 +1,64 @@
+.container {
+  width: 95%;
+  max-width: $container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -30px;
+  margin-right: -30px;
+
+  @include clearfix;
+}
+
+*[class^='col-'],
+*[class*=' col-'] {
+  position: relative;
+  width: 100%;
+	min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+}
+
+.no-gutter *[class^='col-'],
+.no-gutter *[class*=' col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+@include xs {
+  @for $i from 1 through $columns {
+    .col-xs-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+  }
+}
+
+@include sm {
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+  }
+}
+
+@include md {
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+  }
+}
+
+@include lg {
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      width: (100% / $columns) * $i;
+    }
+  }
+}

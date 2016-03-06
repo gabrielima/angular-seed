@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp"             : "*",
+    "gulp-autoprefixer": "*",
+    "gulp-imagemin"    : "*",
+    "gulp-htmlmin"     : "*",
+    "browser-sync"     : "*",
+    "gulp-cssnano"     : "*",
+    "gulp-plumber"     : "*",
+    "gulp-concat"      : "*",
+    "gulp-jshint"      : "*",
+    "gulp-rename"      : "*",
+    "gulp-uglify"      : "*",
+    "gulp-cache"       : "*",
+    "gulp-sass"        : "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Lima",
+  "license": "MIT"
+}
