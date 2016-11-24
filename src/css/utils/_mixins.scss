@@ -1,47 +1,36 @@
-@mixin container{
-  padding-left: calc(50% - #{$container / 2});
-  padding-right: calc(50% - #{$container / 2});
-
-  @media only screen and (max-width: $container){
-      padding-left: 5%;
-      padding-right: 5%;
-  }
-}
-
 @mixin xs {
-  @media only screen and (min-width: $xs) {
+  @media all and (min-width: $xs) {
     @content;
   }
 }
 
 @mixin sm {
-  @media only screen and (min-width: $sm) {
+  @media all and (min-width: $sm) {
     @content;
   }
 }
 
 @mixin md {
-  @media only screen and (min-width: $md) {
+  @media all and (min-width: $md) {
     @content;
   }
 }
 
 @mixin lg {
-  @media only screen and (min-width: $lg) {
+  @media all and (min-width: $lg) {
     @content;
   }
 }
 
 @mixin breakpoint($from, $to: 0) {
-
   @if $to > $from {
-    @media only screen and (min-width: $from) and (max-width: $to) {
+    @media all and (min-width: $from) and (max-width: $to) {
       @content;
     }
   }
 
   @else {
-    @media only screen and (min-width: $from) {
+    @media all and (min-width: $from) {
       @content;
     }
   }
@@ -57,20 +46,4 @@
   &:after {
     clear: both;
   }
-}
-
-@mixin vertical-align-element($position: relative) {
-  position: $position;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @if $position == absolute {
-    transform: translate(-50%,-50%);
-  }
-}
-
-@mixin radial-gradient($color1, $color2){
-  background: $color2;
-  background: radial-gradient(ellipse at center,  $color1 0%, $color2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=1 );
 }

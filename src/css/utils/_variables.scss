@@ -1,48 +1,36 @@
-
 /*
 *  Colors
 *----------------------- */
 $text-color: #333;
-$quiet-color: #ccc;
-$loud-color: #000;
 $heading-color: #111;
 
-$primary-color: #3498db;
+$primary-color: $text-color;
 $error-color: #e74c3c;
 $success-color: #27ae60;
-
-$link-color: $primary-color;
-$link-hover-color: darken($primary-color, 10%);
-$link-visited-color: darken($primary-color, 20%);
-
+$link-color: $text-color;
 
 
 /*
 *  Typography
 *----------------------- */
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: Arial, sans-serif;
 $base-font-root: 16px;
 $base-font-weight: 300;
 $base-font-line-height: 1.5 !default;
 
 $base-font-size: 1rem !default;
-$base-font-lg:   1.15rem !default;
-$base-font-sm:   .95rem !default;
-$base-font-xs:   .85rem !default;
+$base-font-lg:   1.1rem !default;
+$base-font-sm:   1.05rem !default;
+$base-font-xs:   1rem !default;
 
-$heading-font-family: Helvetica, Arial, sans-serif;
+$heading-font-family: 'Helvetica Neue', Helvetica, Arial sans-serif;
 $heading-font-weight: 700;
-$heading-font-h1: 2.5rem !default;
+$heading-font-h1: 2.2rem !default;
 $heading-font-h2: 2rem !default;
-$heading-font-h3: 1.75rem !default;
-$heading-font-h4: 1.5rem !default;
-$heading-font-h5: 1.25rem !default;
+$heading-font-h3: 1.8rem !default;
+$heading-font-h4: 1.6rem !default;
+$heading-font-h5: 1.3rem !default;
 $heading-font-h6: 1rem !default;
-
-$fixed-font-family: monospace;
-$fixed-font-size: 15px;
-$fixed-line-height: 1.2;
-
 
 /*
 *  Grid
@@ -50,25 +38,25 @@ $fixed-line-height: 1.2;
 
 //Starting from
 $xs: 0;
-$sm: 480px;
+// $sm: 480px;
+$sm: 660px;
 $md: 768px;
 $lg: 992px;
-$xg: 1200px;
+$xg: 1100px;
 
+$container: 1100px;
+$gutter: 20px;
 $columns: 12;
-$container: 1000px;
-
-
 
 /*
 *  Indexing
 *----------------------- */
-$index1: 100;
-$index2: 200;
-$index3: 300;
-$index4: 400;
-$index5: 500;
-$index6: 600;
-$index7: 700;
-$index8: 800;
-$index9: 900;
+$index1: 10;
+$index2: 20;
+$index3: 30;
+$index4: 40;
+$index5: 50;
+$index6: 60;
+$index7: 70;
+$index8: 80;
+$index9: 90;

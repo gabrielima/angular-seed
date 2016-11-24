@@ -1,26 +1,49 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "main": "gulpfile.js",
+  "name": "angular-seed",
+  "version": "1.0.0",
+  "description": "AngularJS & SASS project starter",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-i18n": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.3",
+    "angularfire": "^2.1.0",
+    "firebase": "^3.6.1"
+  },
   "devDependencies": {
-    "gulp"             : "*",
-    "gulp-autoprefixer": "*",
-    "gulp-imagemin"    : "*",
-    "gulp-htmlmin"     : "*",
-    "browser-sync"     : "*",
-    "gulp-cssnano"     : "*",
-    "gulp-plumber"     : "*",
-    "gulp-concat"      : "*",
-    "gulp-jshint"      : "*",
-    "gulp-rename"      : "*",
-    "gulp-uglify"      : "*",
-    "gulp-cache"       : "*",
-    "gulp-sass"        : "*"
+    "browser-sync": "^2.18.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-wrap": "^0.13.0",
+    "jshint": "^2.9.4",
+    "path": "^0.12.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gabriel Lima",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielima/angular-seed.git"
+  },
+  "author": "Gabriel de Lima Rabelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielima/angular-seed/issues"
+  },
+  "homepage": "https://github.com/gabrielima/angular-seed#readme"
 }

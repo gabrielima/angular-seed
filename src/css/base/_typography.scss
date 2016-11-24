@@ -1,3 +1,12 @@
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   color: $text-color;
   line-height: $base-font-line-height;
@@ -10,34 +19,14 @@ body {
   @include lg { font-size: $base-font-lg; }
 }
 
-.italic { font-style: italic; }
-.bold   { font-weight: 700 }
+.heading {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  margin-bottom: .5rem;
+}
 
-.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $heading-font-family; font-weight: $heading-font-weight; margin-bottom: .5rem; }
-.h1, .h2 { line-height: 1.1; }
-.h3, .h4 { line-height: 1.3; }
-.h1 { font-size: $heading-font-h1; letter-spacing: -2px; }
-.h2 { font-size: $heading-font-h2; letter-spacing: -1px; }
-.h3 { font-size: $heading-font-h3; }
-.h4 { font-size: $heading-font-h4; }
-.h5 { font-size: $heading-font-h5; }
-.h6 { font-size: $heading-font-h6; }
+h1, h2, h3, h4, h5, h6 { @extend .heading; }
 
-a { color: $link-color; text-decoration: none; }
-
-i, em { @extend .italic; }
-b, strong { @extend .bold; }
-
-h1 { @extend .h1; }
-h2 { @extend .h2; }
-h3 { @extend .h3; }
-h4 { @extend .h4; }
-h5 { @extend .h5; }
-h6 { @extend .h6; }
-
-p, ul, ol, pre { margin-bottom: 1rem; }
-
-ul { list-style-type: none; }
-ol { list-style: decimal; }
-
-pre, code { font-family: $fixed-font-family; font-size: $fixed-font-size; line-height: $fixed-line-height; }
+a { color: inherit; text-decoration: none; }
+a, a:hover, a:focus, a:active { text-decoration: none; }

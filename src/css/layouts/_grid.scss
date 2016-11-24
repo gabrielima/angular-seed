@@ -1,31 +1,49 @@
 .container {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+
+  @include breakpoint($container) {
+    padding-left: calc(50% - #{$container/2});
+    padding-right: calc(50% - #{$container/2});
+  }
+}
+
+.container-full {
+  @include breakpoint($container) {
+    padding-left: calc(50% - #{$container/2});
+    padding-right: calc(50% - #{$container/2});
+  }
+}
+
+.container-box {
   width: 95%;
   max-width: $container;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .row {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: -30px;
-  margin-right: -30px;
-
-  @include clearfix;
+  font-size: 0;
 }
 
-*[class^='col-'],
-*[class*=' col-'] {
+*[class^='xs-'],
+*[class^='sm-'],
+*[class^='md-'],
+*[class^='lg-'] {
   position: relative;
   width: 100%;
 	min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  float: left;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  font-size: $base-font-size;
+  display: inline-block;
+  vertical-align: top;
+  *zoom: 1;
 }
 
-.no-gutter *[class^='col-'],
-.no-gutter *[class*=' col-'] {
+.no-gutter *[class^='xs-'],
+.no-gutter *[class^='sm-'],
+.no-gutter *[class^='md-'],
+.no-gutter *[class^='lg-'] {
   padding-left: 0;
   padding-right: 0;
 }
@@ -33,7 +51,7 @@
 
 @include xs {
   @for $i from 1 through $columns {
-    .col-xs-#{$i} {
+    .xs-#{$i} {
       width: (100% / $columns) * $i;
     }
   }
@@ -41,7 +59,7 @@
 
 @include sm {
   @for $i from 1 through $columns {
-    .col-sm-#{$i} {
+    .sm-#{$i} {
       width: (100% / $columns) * $i;
     }
   }
@@ -49,7 +67,7 @@
 
 @include md {
   @for $i from 1 through $columns {
-    .col-md-#{$i} {
+    .md-#{$i} {
       width: (100% / $columns) * $i;
     }
   }
@@ -57,7 +75,7 @@
 
 @include lg {
   @for $i from 1 through $columns {
-    .col-lg-#{$i} {
+    .lg-#{$i} {
       width: (100% / $columns) * $i;
     }
   }
