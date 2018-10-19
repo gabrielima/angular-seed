@@ -4,7 +4,7 @@ angular
 
 function ComponentService($firebaseArray, $firebaseObject) {
   this.fetch = function() {
-    return ' Component';
+    return 'Component';
   };
 }
 
