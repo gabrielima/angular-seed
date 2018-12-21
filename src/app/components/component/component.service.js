@@ -2,7 +2,7 @@ angular
   .module('app.components')
   .service('ComponentService', ComponentService);
 
-function ComponentService($firebaseArray, $firebaseObject) {
+function ComponentService(API, $firebaseArray, $firebaseObject) {
   this.fetch = function() {
     return 'Component';
   };
